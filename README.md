@@ -12,9 +12,11 @@ A collection of scripts for working with CHIP
 1. Clone [CHIP-tools repository](git@github.com:alxgcrz/chip-tools.git) to $HOME/CHIP-tools: `git clone git@github.com:alxgcrz/chip-tools.git $HOME/CHIP-tools`
 1. Change to 'CHIP-tools' folder: `cd CHIP-tools`
 1. Modify permissions: `sudo chmod 755 *.sh`
-1. Execute setup script: `cd CHIP-tools && bash setup.sh`
+1. Execute setup script: `bash setup.sh`
 1. Execute `FEL='sudo sunxi-fel' FASTBOOT='sudo fastboot' SNIB=false`
-1. Execute tool: `./chip-update-firmware.sh -L ./stable-server-b149`
+1. Execute tool to flash CHIP:
+    * With local firmware: `./chip-update-firmware.sh -L ./stable-server-b149`
+    * Downloading remote firmware: `./chip-update-firmware.sh`
 1. When "Waiting for fel......" prompt appears, connect CHIP to the host computer with a microUSB cable.
 1. When "FLASH VERIFICATION COMPLETE" message appears, flashing is successful.
 1. Disconnect CHIP from PC
