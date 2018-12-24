@@ -55,7 +55,7 @@ if [ ! -d stable-server-b149 ]; then
     mkdir stable-server-b149
 fi
 cd stable-server-b149
-wget -i ./server_imgs.txt
+wget -i ../server_imgs.txt
 cd ..
 
 #echo -e "\n Installing sunxi-tools"
