@@ -1,5 +1,7 @@
 #!/bin/bash
 
+URL_IMG_FILE="urls.txt"
+
 echo -e "\n Setting up environment in Ubuntu"
 sudo apt-get -y update
 sudo apt-get -y install \
@@ -53,10 +55,10 @@ sudo udevadm control --reload-rules
 echo -e "\n Downloading server images"
 if [ ! -d stable-server-b149 ]; then
     mkdir stable-server-b149
+    cd stable-server-b149
+    wget -i ../$URL_IMG_FILE
+    cd ..
 fi
-cd stable-server-b149
-wget -i ../server_imgs.txt
-cd ..
 
 #echo -e "\n Installing sunxi-tools"
 #if [ -d sunxi-tools ]; then
